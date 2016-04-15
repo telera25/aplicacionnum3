@@ -1,0 +1,465 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  p {
+	  color:#FFF
+  }
+ .lista {
+	 text-align:justify;
+	 
+ }
+</style>
+
+<title>Tercera Aplicación	</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/app3.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/20160404_152904.jpg','imagenes/pascua.jpg','imagenes/reciclado.png')">
+<div data-role="page" id="Principal" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+    <h1 style=" font-size:28px;"><i><center>La Contaminación &nbsp;<img src="imagenes/verde4.png" width="16" height="16"></center></i></h1>
+    <div>
+     <img src="imagenes/tema.jpg" width="100%" style="border-radius:15px;"> 
+    </div>
+  </div>
+      <div data-role="main" class="ui-content">
+        
+  </div>
+          
+<div>
+    <ul id="lista" data-role="listview" data-theme="a" class="ui-listview ui-group-theme-a">
+    <li class="ui-first-child ui-last-child">
+      <a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+      <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">¿Qué es la Contaminacioó?</h2>
+      </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+        <a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+        <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Tipos de contaminación</h2>
+        </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+         <a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Causas de la Contaminación</h2>
+         </a>
+    </li>
+    <li class="ui-first-child ui-last-child">
+         <a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Consecuencias de la Contaminación</h2>
+         </a>
+    </li> 
+    <li class="ui-first-child ui-last-child">
+         <a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Medidas preventivas</h2>
+         </a>
+    </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Problemas en mi comunidad</h2>
+         </a>
+    </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Causas y consecuencias de la contaminación en mi colonia.</h2>
+         </a>
+    </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">¿Cómo solucionar estos problemas?</h2>
+         </a>
+    </li>
+    
+     </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina9" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Más...</h2>
+         </a>
+    </li> 
+    
+     </li>
+        <li class="ui-first-child ui-last-child">
+         <a href="#Pagina10" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+         <h2 style=" font-family:Georgia, 'Times New Roman', Times, serif;">Galería de Imágenes</h2>
+         </a>
+    </li>
+    
+    </ul>
+</div>
+<div data-role="footer" align="center" data-theme="a">
+   <div>
+       <img src="imagenes/hoja.png" width="46" height="46">
+   </div>
+   <div>
+      <h4>Aplicación Tres.</h4>
+      <h4>Rodrigo Martínez Peña</h4>
+   </div>
+</div>
+</div>
+
+ <div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+     <h1 style="font-size:25px;">¿Qué es la Contaminación?</h1>
+   </div>
+   <div data-role="content" align="center" class="fondo">
+   
+    <div>
+       <p>
+          La Contaminación se denomina a la presencia en el ambiente de cualquier agente químico, físico o biológico nocivos para la salud o el bienestar de la población, de la vida animal o vegetal.
+
+Esta degradación del medio ambiente por un contaminante externo puede provocar daños en la vida cotidiana del ser humano y alterar las condiciones de supervivencia de la flora y la fauna.
+
+Alrededor de 2 millones de personas podrían morir cada año por alguna causa atribuible a la contaminación atmosférica, asegura la Organización Mundial de la Salud. Según este estudio la mayor cantidad de muertes se producen en los países en desarrollo donde se concentran  altas densidades de partículas nocivas para la salud.
+ <div>
+       <img src="imagenes/arbol.jpg" width="45%" height="45%" style="border-radius:15px;">
+       <img src="imagenes/montaña.jpg" width="43%" height="43%" style="border-radius:15px;">
+       <img src="imagenes/mundot.jpg" width="45%" height="45%" style="border-radius:15px">
+       
+      </div>
+       </p>
+       <div data-role="collapsible"  align="center" style="width:100%;">
+          <h1>Algo Más...</h1>
+         <p>La contaminación es la introducción de sustancias en un medio que provocan que este sea inseguro o no apto para su uso.1 El medio puede ser un ecosistema, un medio físico o un ser vivo. El contaminante puede ser una sustancia química, energía (como sonido, calor, luz o radiactividad).
+
+Es siempre una alteración negativa del estado natural del medio, y por lo general, se genera como consecuencia de la actividad humana considerándose una forma de impacto ambiental. <div>
+           <img src="imagenes/gy.jpg" width="20%" height="20%" style="border-radius:15px;" style="border-image:repeat; border-color:#000;">
+           <img src="imagenes/ny.jpg" width="20%" height="20%" style="border-radius:15px;">
+         </div></p>
+      </div>
+    </div>
+   </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4>Rodrigo Martínez Peña</h4>
+   </div>
+   
+ </div> 
+     
+ <div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+   <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+     <h1 style="font-size:25px;">Tipos de contaminación</h1>
+   </div>
+   <div data-role="content" align="center">
+    <div>
+      <p>
+        La contaminación puede ocurrir, en el suelo, la tierra y el aire.
+
+Se puede dividir en clases según los agentes contaminantes o el medio afectado:
+
+<ul class="lista">
+  <li>Contaminación Atmosférica: producto de las emisiones de gases tóxicos a la atmósfera terrestre, como el dióxido de carbono</li>
+  <br>
+
+  <li>Contaminación del Agua: presencia de desechos en el agua,  como los vertidos de industrias y las aguas servidas.</li><br>
+
+  <li>Contaminación del Suelo: presencia de desechos en el suelo, a causa de actividades agrícolas y ganaderas.</li><br>
+
+  <li>Contaminación Sonora: presencia de altos decibelios en algún lugar determinado.</li><br>
+
+  <li>Contaminación Química: un compuesto químico se introduce en el medio.</li><br>
+
+  <li>Contaminación Radiactiva: dispersión de materiales radiactivos accidentalmente.</li><br>
+
+  <li>Contaminación Térmica: emisión de fluidos a elevada temperatura.</li><br>
+
+  <li>Contaminación Electromagnética: radiaciones del espectro electromagnéticoque son perjudiciales para los seres vivos.</li><br>
+
+  <li>Contaminación Microbiológica: Producida  por microorganismos, como en la manipulación inadecuada de alimentos.</li><br>
+
+</ul>
+      </p>
+       <div data-role="collapsible"  align="center" style="width:100%;">
+          <h1>Conoce Más...</h1>
+         <p>La contaminación puede clasificarse según el tipo de fuente de donde proviene, o por la forma de contaminante que emite o medio que contamina. Existen muchos agentes contaminantes entre ellos las sustancias químicas (como plaguicidas, cianuro, herbicidas y otros.), los residuos urbanos, el petróleo, o las radiaciones ionizantes. <div>
+           <img src="imagenes/humo.jpg" width="30%" height="30%">
+         </div> </p>
+      </div>
+    </div>
+   </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4>Rodrigo Martínez Peña</h4>
+   </div>
+ </div>
+
+ 
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Causas de la Contaminación</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+         Nuestro planeta se encuentra expuesto a numerosos contaminantes que perjudican al bienestar y a la salud de los seres vivos que habitan en él.
+
+
+La Organización de Naciones Unidas destaca como culpables de la contaminación y el efecto invernadero a las ciudades porque “ellas ocupan el 2% del territorio mundial y producen el 70% de estos gases”. Esta organización advierte que la situación podría empeorar porque muchos países están teniendo un crecimiento muy acelerado, como Brasil. China e India, y a su vez están emitiendo gases contaminantes.
+
+Las principales causas de la contaminación son:
+<div class="lista">
+•  El tráfico rodado<br>
+
+•   En las ciudades existe otra fuente de contaminación como son las construcciones y las demoliciones: estas actividades desprenden polvos y gases que dañan el aire de la zona en que se desarrollan,  y  a su vez contaminan el agua donde arrojan sus desechos.<br>
+
+•   Los Combustibles fósiles<br>
+
+•  El índice de población mundial ha crecido a distinto ritmo que la tasa de mortalidad, hecho que ha impactado sobre el medioambiente: provocando la ineficiencia en el tratamiento de las aguas residuales domésticas, el aumento del consumo irreflexivo  y la generación de toneladas de basura.<br>
+
+•   El progreso tecnológico beneficia a nivel económico y social,  pero la proliferación de industrias y la falta de control ambiental en sus procesos, ha perjudicado el ecosistema por la gran cantidad de residuos arrojados al aire, en ríos y mares.<br>
+
+•   La deforestación<br>
+
+•   Los pesticidas y los productos químicos utilizados en los cultivos llegan a  contaminar el suelo y el agua de la zona en que se sembró. Llegando incluso a contaminar, de forma alarmante, a muchos alimentos.
+</div>
+
+       </p>
+       <div data-role="collapsible"  align="center" style="width:100%;">
+          <h1>Deseas conocer mas!?...</h1>
+         <p>La contaminación puede clasificarse según el tipo de fuente de donde proviene, o por la forma de contaminante que emite o medio que contamina. Existen muchos agentes contaminantes entre ellos las sustancias químicas (como plaguicidas, cianuro, herbicidas y otros.), los residuos urbanos, el petróleo, o las radiaciones ionizantes. <div><img src="imagenes/cont.jpg"; width="45%" height="auto;"></div> </p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4>Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div> 
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Consecuencias de la Contaminación</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+         La contaminación ambiental deteriora cada vez mas a nuestro planeta y a nosotros mismos pues según investigaciones al respirar el aire contaminado esto afecta nuestra salud cardiovascular
+por lo que normas estrictas de aire limpio contribuirían a una mejor salud con efectos en gran escala. 
+Otra consecuencia es el debilitamiento de la capa de ozono, que protege a los seres vivos de la radiación ultravioleta del Sol, debido a la destrucción del ozono estratosférico y esto provoca el calentamiento global.La contaminacion al medio atenta contra la vida de plantas, animales y personas, genera daños físicos en los individuos, convierte en un elemento no consumible al agua
+y hace que en los suelos contaminados no sea posible la siembra. Esto afecta  a demás el clima y las actividades realizadas por el ser humano dañandolo y perjudicándole. 
+       </p>
+       
+       <div data-role="collapsible"  align="center" style="width:100%;">
+         <h1>Algo más...</h1>
+         <p>La destrucción de la capa de ozono, la contaminación del agua, el dióxido de carbono, acidificación, erosión del suelo, hidrocarburos clorados y otras causas de contaminación como el derramamiento de petróleo están destruyendo nuestro planeta, pero la "causa que produce las demás causas" somos nosotros mismos...<div><img src="imagenes/CD.jpg"></div></p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4>Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div>                                                        
+
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Medidas preventivas</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+       <ul class="lista">
+       <p>
+         Algunas medidas preventivas que podrias llevar a cabo son:
+       </p><br>
+
+         <li>No quemar ni talar plantas</li>
+         <li>Controlar el uso de fertilizantes y pesticidas</li>
+         <li>No botar basura en lugares inapropiados</li>
+         <li>Regular el servicio de aseo urbano</li>
+         <li>Crear conciencia ciudadana</li>
+         <li>Crear vías de desagües para las industrias que no lleguen a los mares ni ríos utilizados para el servicio o consumo del hombre ni animales</li>
+         <li>Controlar los derramamientos accidentales de petróleo</li>
+         <li>Controlar los relaves mineros   </li>
+       </ul>
+
+
+       </p>
+       <div data-role="collapsible"  align="center" style="width:100%;">
+          <h1>Más sobre la prevención...</h1>
+         <p>Es importante aprender a respetar a nuestro ambiente, las cosas que le pasan son por nuestra causa, es nuestra responsabilidad cuidar de nuestro planeta.
+         <div><img src="imagenes/re.jpg" width="40%" height="40%>"></div>
+</p>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4>Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div>                                                         
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Problemas en mi comunidad</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+         En mi comunidad, algunos problemas de la contaminacion son: la basura y la quema de ésta. Esto mismo provoca que las calles se vean mal, e incluso que el gobierno nos llame la atencion por la culpa de la gente que no tiene moral, ni valores etc. Es importante tener una buena imagen, mas allá de lo que las otras comunidades puedan decir, es aún mas importante tener limpia la zona para beneficio propio y el del ambiente, comunidad, planeta etc. Otro problema que sobreabunda en mi comunidad, es la que de residuos o la quema de basura, esto provoca la produccion de CO2 y a su vez, la contaminación del aire.
+       </p>
+       <div data-role="collapsible"  align="center" style="width:100%;">
+          <h1>Más...</h1>
+         <p>Es importante reducir las emisiones de CO2 de lo contrario, el aire tarde o temprano se volvera demaciado tóxico.</p>
+         <div><img src="imagenes/1.jpg" width="40%" height="40%"></div>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4>Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div> 
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Causas y consecuencias de la contaminacion en mi comunidad.</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+         En mi comunidad, lamentablemente la gente ya se hizo el hábito de dejar su basura en las esquinas de las calles. Eso, seria una causa del porque la contaminación, la gente es floja, y sucia, y si eso se les enseña a los pequeños, entonces no hay ni habrá un cambio para bien, sino al contrario, cada vez la cosa se va a poner peor.
+Si las calles estan en mal estado, o si el agua esta sucia, o el aire se encuentra invadido por agentes contaminantes como el CO2 entre otros, lo unico que se provocaria es que la calidad de vida de todas las personas desmejore, y a su vez, se provoquen mas enfermadades respiratorias o incluso digestivas, provocando que se deteriore el ambiente que nos rodea.
+
+<div> 
+   <img src="imagenes/2.jpg" width="40%" height="40%">
+   <img src="imagenes/3.jpg" width="40%" height="40%">
+</div>
+       </p>
+       
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4> Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">¿Cómo solucionar estos problemas?</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+         Una forma sencilla para combatir este mal, seria que nos propusieramos a dar una especie de conferencia para tratar de hacer entrar en razón a la gente. 
+O bien, repartir pequeños volantes o folletos donde explique de una manera un poco cruda o directa, el porque debemos cuidar de nuestro planeta.
+El problema en el que mas deberíamos enfocarnos, sería el de la basura.
+<div> 
+   <img src="imagenes/4.jpg" width="30%" height="30%">
+</div>
+Entonces, lo que se haría es, que recolectemos la basura, poniendola en su orden debido, aparte de ello, colocar botes de basura que tengan o poseean las divisiones especificas para cada tipo de basura, es decir, plasticos, papeles etc. 
+<div> </div>
+       
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4> Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina9" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Más...</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+      Para Reflexionar un poco sobre este tema, ve el siguiente video, te gustará.
+       </p>
+       <div data-role="collapsible"  align="center" style="width:100%;">
+          <h1>Abre esto!</h1>
+         <p><video width="620" height="440" controls>
+  <source src="imagenes/corto_contaminacion.mp4" type="video/mp4">
+ </audio>
+
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4> Rodrigo Martínez Peña</h4>
+  </div>
+  </div>
+  
+<div data-role="page" id="Pagina10" data-add-back-btn="true" data-theme="a">
+  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
+      <h1 style="font-size:25px;">Galería de Imágenes</h1>
+  </div>
+  <div data-role="content" align="center">
+    <div>
+       <p>
+       <iframe src=recursos/imagenes/indexvisor.html" style="width:960px;height:360px;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+       </p>
+       
+  <div data-role="footer" data-theme="a">
+  <div>
+       <center><img src="imagenes/hoja.png" width="46" height="46"></center>
+   </div>
+      <h4> Rodrigo Martínez Peña</h4>
+  </div>
+</div>
+</div> 
+   </div>
+</div>
+</body>
+</html>
